@@ -125,13 +125,13 @@ export default function HeroSection() {
 
       <div className="md:grid grid-cols-3 gap-4 px-5 pb-5 w-full 3xl:max-w-7xl mx-auto hidden">
         <div className="bg-[url('/IMG01.svg')] bg-cover bg-center bg-no-repeat rounded-xl flex items-end justify-end h-80">
-          <div className="bg-[#1B1B1B] bg-opacity-80 w-full h-fit py-5 rounded-xl flex flex-col items-center justify-center text-white">
+          <div className="bg-[#1B1B1B] bg-opacity-80 w-full h-fit p-5 rounded-xl flex flex-col items-center justify-center text-white text-center">
             <h2 className="uppercase text-2xl font-bold">Faça sua encomenda</h2>
             <p className="text-sm font-light">
-              Venha se deliciar com os nosso incríveis produtos.
+              Experimente o melhor em cada mordida.
             </p>
 
-            <Button className="w-[90%] mt-5" asChild>
+            <Button className="w-full mt-5" asChild>
               <Link
                 target="_blank"
                 href={`https://wa.me/12981847553?text=
@@ -147,15 +147,15 @@ export default function HeroSection() {
         <div className="bg-[url('/IMG02.svg')] bg-cover bg-center bg-no-repeat rounded-xl flex items-end justify-end h-80" />
 
         <div className="bg-[url('/IMG03.svg')] bg-cover bg-center bg-no-repeat rounded-xl flex items-end justify-end h-80">
-          <div className="bg-[#1B1B1B] bg-opacity-80 w-full h-fit py-5 rounded-xl flex flex-col items-center justify-center text-white">
-            <h2 className="uppercase text-2xl font-bold">
-              Acesse o nosso cardápio
-            </h2>
-            <p className="text-sm font-light">Conheça o nosso cardápio.</p>
+          <div className="bg-[#1B1B1B] bg-opacity-80 w-full h-fit p-5 rounded-xl flex flex-col items-center justify-center text-white text-center">
+            <h2 className="uppercase text-2xl font-bold">Explore o cardápio</h2>
+            <p className="text-sm font-light">
+              Descubra as delícias que temos para oferecer.
+            </p>
 
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="w-[90%] mt-5">
+                <Button className="w-full mt-5">
                   Ver Cardápio <MdOutlineMenuBook size={20} className="ml-2" />
                 </Button>
               </DialogTrigger>
