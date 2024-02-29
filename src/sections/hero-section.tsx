@@ -20,7 +20,141 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+
 import Link from "next/link";
+import MenuCard from "@/components/menu-card";
+
+const menuItems = [
+  { name: "Pão Artesanal", description: "Pão fresco e crocante", price: 5.99 },
+  {
+    name: "Bolo de Chocolate",
+    description: "Delicioso bolo de chocolate",
+    price: 12.99,
+  },
+  { name: "Croissant", description: "Croissant folhado e macio", price: 3.49 },
+  {
+    name: "Baguete Integral",
+    description: "Baguete integral com grãos",
+    price: 7.99,
+  },
+  {
+    name: "Torta de Frutas",
+    description: "Torta recheada com frutas frescas",
+    price: 15.99,
+  },
+  {
+    name: "Pão de Queijo",
+    description: "Tradicional pão de queijo mineiro",
+    price: 4.99,
+  },
+  {
+    name: "Cookies de Aveia",
+    description: "Cookies de aveia com pedaços de chocolate",
+    price: 6.99,
+  },
+  {
+    name: "Bolo de Morango",
+    description: "Bolo recheado com morangos frescos",
+    price: 14.99,
+  },
+  {
+    name: "Sanduíche de Frango",
+    description: "Sanduíche de frango grelhado",
+    price: 8.99,
+  },
+  {
+    name: "Brownie de Nozes",
+    description: "Brownie com nozes e chocolate",
+    price: 9.99,
+  },
+  {
+    name: "Pão de Cebola",
+    description: "Pão artesanal com cebolas caramelizadas",
+    price: 6.49,
+  },
+  {
+    name: "Torta de Limão",
+    description: "Torta cremosa de limão",
+    price: 13.99,
+  },
+  {
+    name: "Empada de Palmito",
+    description: "Empada recheada com palmito",
+    price: 5.49,
+  },
+  {
+    name: "Rosquinhas de Canela",
+    description: "Rosquinhas fofas com canela",
+    price: 3.99,
+  },
+  {
+    name: "Bolo Red Velvet",
+    description: "Bolo aveludado com cream cheese",
+    price: 16.99,
+  },
+  {
+    name: "Pão Multigrãos",
+    description: "Pão com diversos grãos e sementes",
+    price: 7.49,
+  },
+  {
+    name: "Torta de Maçã",
+    description: "Torta clássica de maçã",
+    price: 11.99,
+  },
+  {
+    name: "Sanduíche Vegetariano",
+    description: "Sanduíche com ingredientes frescos",
+    price: 8.49,
+  },
+  {
+    name: "Coxinha de Frango",
+    description: "Coxinha recheada com frango desfiado",
+    price: 4.79,
+  },
+  {
+    name: "Pudim de Leite",
+    description: "Pudim tradicional de leite condensado",
+    price: 10.99,
+  },
+  {
+    name: "Bolo de Cenoura",
+    description: "Bolo fofinho com cobertura de chocolate",
+    price: 13.49,
+  },
+  {
+    name: "Pão Australiano",
+    description: "Pão escuro com mel e aveia",
+    price: 6.99,
+  },
+  {
+    name: "Bolo de Abacaxi",
+    description: "Bolo recheado com pedaços de abacaxi",
+    price: 14.49,
+  },
+  {
+    name: "Cinnamon Rolls",
+    description: "Rolinhos de canela com cobertura de cream cheese",
+    price: 9.49,
+  },
+  {
+    name: "Torta Holandesa",
+    description: "Torta com camadas de creme e biscoito",
+    price: 17.99,
+  },
+  {
+    name: "Pão de Alho",
+    description: "Pão recheado com alho e ervas",
+    price: 5.29,
+  },
+  {
+    name: "Bolo de Nozes",
+    description: "Bolo com pedaços generosos de nozes",
+    price: 15.49,
+  },
+  { name: "Pão Francês", description: "O clássico pão francês", price: 2.99 },
+];
 
 export default function HeroSection() {
   const [api, setApi] = useState<CarouselApi>();
@@ -95,11 +229,17 @@ export default function HeroSection() {
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
-                      <DialogTitle>Are you absolutely sure?</DialogTitle>
+                      <DialogTitle>Nosso cardápio</DialogTitle>
                       <DialogDescription>
-                        This action cannot be undone. This will permanently
-                        delete your account and remove your data from our
-                        servers.
+                        <ScrollArea className="h-[25rem] w-full rounded-md border p-2 my-5">
+                          <div className="container mx-auto mt-8">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pb-10">
+                              {menuItems.map((item, index) => (
+                                <MenuCard key={index} item={item} />
+                              ))}
+                            </div>
+                          </div>
+                        </ScrollArea>
                       </DialogDescription>
                     </DialogHeader>
                   </DialogContent>
@@ -161,10 +301,17 @@ export default function HeroSection() {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Are you absolutely sure?</DialogTitle>
+                  <DialogTitle>Nosso cardápio</DialogTitle>
                   <DialogDescription>
-                    This action cannot be undone. This will permanently delete
-                    your account and remove your data from our servers.
+                    <ScrollArea className="h-[25rem] w-full rounded-md border p-2 my-5">
+                      <div className="container mx-auto mt-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pb-10">
+                          {menuItems.map((item, index) => (
+                            <MenuCard key={index} item={item} />
+                          ))}
+                        </div>
+                      </div>
+                    </ScrollArea>
                   </DialogDescription>
                 </DialogHeader>
               </DialogContent>
