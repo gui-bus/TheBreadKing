@@ -10,6 +10,7 @@ import { FaLinkedinIn, FaWhatsapp, FaGithub } from "react-icons/fa6";
 import { FaMailBulk } from "react-icons/fa";
 import { IoChevronDownCircleOutline } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
+import QualitySection from "@/sections/quality-section";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,7 +48,7 @@ export default function Home() {
           />
         </div>
 
-        <div  className="flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <div className="my-3 flex md:absolute md:bottom-3 md:right-3 md:my-0">
             <div className="flex items-center justify-center gap-2 md:flex-col">
               <Button size={"icon"} variant={"outline"} asChild>
@@ -99,6 +100,10 @@ export default function Home() {
       <Separator className="mb-5" />
 
       <ContactSection />
+
+      <Separator className="my-5" />
+
+      <QualitySection />
     </main>
   );
 }
