@@ -43,7 +43,7 @@ export default function HeroSection() {
   return (
     <section className="flex flex-col items-center justify-center">
       <Carousel
-        className="mx-auto w-full max-w-7xl px-5 pb-5 md:hidden"
+        className="mx-auto w-full max-w-7xl px-5 pb-5 md:hidden text-center"
         setApi={setApi}
         opts={{
           loop: true,
@@ -123,7 +123,7 @@ export default function HeroSection() {
         </div>
       </Carousel>
 
-      <div className="md:grid grid-cols-3 gap-4 px-5 pb-5 w-full 3xl:max-w-7xl mx-auto hidden">
+      <div className="md:grid grid-cols-3 gap-4 px-5 pb-5 w-full 3xl:max-w-7xl mx-auto hidden cursor-default select-none">
         <div className="bg-[url('/IMG01.svg')] bg-cover bg-center bg-no-repeat rounded-xl flex items-end justify-end h-80">
           <div className="bg-[#1B1B1B] bg-opacity-80 w-full h-fit p-5 rounded-xl flex flex-col items-center justify-center text-white text-center">
             <h2 className="uppercase text-2xl font-bold">Faça sua encomenda</h2>
